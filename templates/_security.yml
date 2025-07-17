@@ -1,0 +1,6 @@
+security_scan:
+  stage: security
+  image: python:3.10
+  script:
+    - pip install bandit
+    - bandit -r my_app
