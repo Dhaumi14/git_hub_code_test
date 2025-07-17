@@ -1,0 +1,10 @@
+stages:
+  - build
+  - test
+  - security
+  - deploy
+
+include:
+  - local: 'templates/_build-python.yml'
+  - local: 'templates/_security.yml'
+  - local: 'templates/_deploy-docker.yml'
