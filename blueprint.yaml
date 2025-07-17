@@ -1,0 +1,15 @@
+project_name: my-app
+stack: python
+build: pip
+deployment: docker
+branches:
+  strategy: semantic
+  environments:
+    dev: feature/*
+    staging: release/*
+    prod: main
+tests:
+  unit: true
+  integration: true
+security_scan: true
+coverage_threshold: 80
